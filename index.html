@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product app | Develop width Ionic</title>
+
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./ion-logo.png" type="image/x-icon" />
+
+    <!-- Ionic -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="logo-ionic"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>Products app</ion-title>
+          <ion-buttons slot="end">
+            <ion-button>
+              <p style="margin-right: 2.4em">
+                Total: <span id="total">0</span>$
+              </p>
+              <ion-icon name="cart-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-card>
+                <ion-card-header color="secondary">
+                  <ion-card-title> New Product </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-item>
+                    <ion-label position="floating"> Product Name </ion-label>
+                    <ion-input type="text" id="productName"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating"> Product Price </ion-label>
+                    <ion-input type="number" id="productPrice"></ion-input>
+                  </ion-item>
+
+                  <ion-button id="buttonSave">
+                    <ion-icon name="add-circle" slot="start"></ion-icon>Save
+                  </ion-button>
+
+                  <ion-button color="danger" fill="outline" id="buttonCancel">
+                    <ion-icon name="trash" slot="start"></ion-icon>Clear
+                  </ion-button>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-list id="productList"></ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title style="text-align: center; margin-top: 10px">
+            <a
+              style="text-decoration: none; color: black"
+              href="https://github.com/josh1502-bit"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </ion-title>
+          <ion-title style="text-align: center; margin-bottom: 10px"
+            >Made by josh1502-bit
+          </ion-title style="text-align: center">
+        </ion-toolbar>
+      </ion-footer>
+    </ion-app>
+
+    <!-- Ionic Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- Own Js -->
+    <script src="./app.js"></script>
+  </body>
+</html>
